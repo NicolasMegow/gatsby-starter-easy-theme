@@ -1,33 +1,29 @@
-import { Link } from "gatsby"
+/** @jsx jsx */
+import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+
+import { Box, Flex, Link, jsx } from "theme-ui"
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+    sx={{
+      mb: 2,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+    <Flex sx={{ pt: 2, pb: 2, alignItems: "center" }}>
+      <Link to="/" as={GatsbyLink} variant="logo">
+        {" "}
+        {siteTitle}
+      </Link>
+
+      <Box mx="auto" />
+      <Link as={GatsbyLink} variant="nav" to="/more-features">
+        + More Features
+      </Link>
+      <Link variant="nav" href="/more-features">
+        View source
+      </Link>
+    </Flex>
   </header>
 )
 
