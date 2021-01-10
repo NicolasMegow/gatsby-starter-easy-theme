@@ -36,7 +36,9 @@ const IndexPage = () => (
       <Flex style={{ alignItems: "center", justifyContent: "space-around" }}>
         <span>
           <h2>Easy customization</h2>
-          <p>There are lots of build in easy peasy things.</p>
+          <p>
+            There are lots of build in easy peasy things. One more line here.
+          </p>
         </span>
       </Flex>
     </Grid>
